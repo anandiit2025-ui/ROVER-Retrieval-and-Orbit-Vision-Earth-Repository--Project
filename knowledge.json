@@ -1,0 +1,21 @@
+{
+  "taxonomy": {
+    "events": ["flood", "water", "wildfire", "vegetation"],
+    "operations": ["change_detection", "visual_analysis", "event_information"],
+    "entities": ["location", "start_date", "end_date"],
+    "constraints": ["cloud_cover_max"]
+  },
+  "datasets": {
+    "sentinel-1": {
+      "use_when": ["flood", "water"],
+      "inputs": ["bbox", "start_date", "end_date"],
+      "outputs": ["scene", "radar_change", "flood_area", "water_area"]
+    },
+    "sentinel-2": {
+      "use_when": ["flood", "water", "wildfire", "vegetation"],
+      "inputs": ["bbox", "start_date", "end_date", "cloud_cover_max"],
+      "outputs": ["scene", "before_image", "after_image", "change_result"]
+    }
+  }
+}
+

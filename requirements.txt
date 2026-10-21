@@ -1,0 +1,11 @@
+openai
+python-dotenv
+pystac-client
+rasterio
+numpy
+shapely
+pyproj
+geopy
+matplotlib
+pillow
+requests
